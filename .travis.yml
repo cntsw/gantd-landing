@@ -2,11 +2,10 @@ language: node_js
 node_js:
   - 12
 
-# before_script:
-#   - npm i --quiet --no-progress
-# script: npm run build-storybook --quiet --no-progress
-script: echo a > docs/b.html
-
+before_script:
+  - npm i
+  - date -R > docs/build-date.html
+script: npm run build
 
 cache:
   npm: false
